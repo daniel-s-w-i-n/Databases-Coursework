@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+            <link rel="stylesheet" type="text/css" href="websiteStyle.css">  <!--Links to the style sheet-->
+   
+        <script>
+            function show(ID)
+            {
+                var elem = document.getElementById(ID);
+                elem.style.visibility = "visible" ;
+            }     
+            function hide(ID)
+            {
+                var elem = document.getElementById(ID);
+                elem.style.visibility = "hidden" ;
+            }        
+        </script>
+
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="DatabaseWebsite.html">Home</a>
+                    <ul>
+                        <li><a2 href="">to widen the gap</a2></li>
+                    </ul>
+                <li onmouseover = "show('addList'),show('addList2')" onmouseleave = "hide('addList'),hide('addList2')"><a href="DatabaseWebsite.html">Add</a>
+                    <ul>
+                        <li id ="addList"><a href="AddActor.html">Add Actor</a></li>
+                        <li id ="addList2"><a href="AddMovie.html">Add Movie</a></li>
+                    </ul>
+                </li>
+                <li onmouseover = "show('searchList'),show('searchList2')" onmouseleave = "hide('searchList'),hide('searchList2')"><a href="">Search</a>
+                    <ul>
+                        <li id ="searchList"><a href="ActorSearch.html">Search for Actor</a></li>
+                        <li id ="searchList2"><a href="SearchMovie.html">Search for Movie</a></li>
+                    </ul>
+                </li>
+                <li onmouseover = "show('deleteList'),show('deleteList2')" onmouseleave = "hide('deleteList'),hide('deleteList2')"><a href="">Delete</a>
+                    <ul>
+                        <li id ="deleteList"><a href="DeleteActor.html">Delete Actor</a></li>
+                        <li id ="deleteList2"><a href="DeleteMovie.html">Delete Movie</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h1><u><b>Movie website</b></u></h1>
+            <img src="https://i0.wp.com/us-east-1.linodeobjects.com/gunaxin/2017/06/MCU.jpg?fit=773%2C773&ssl=1" 
+            alt="Marvel Movie" style="float:Right;width:420px;height:420px;"
+            onmouseover = "this.src='https://th.bing.com/th/id/OIP.WRmnC02uETNaacnAbZbo7AAAAA?pid=ImgDet&rs=1';"
+            onmouseleave = "this.src='https://static3.srcdn.com/wordpress/wp-content/uploads/animations-NW.jpg';">
+        <div>
+            <p>This is my website for the Movie databases</p>
+        </div>
+    </body>
+</html>

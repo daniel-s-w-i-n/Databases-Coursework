@@ -1,0 +1,74 @@
+
+  <html>
+    <head>
+      <title>Search for Actor</title>
+        <link rel="stylesheet" type="text/css" href="websiteStyle.css">
+    <script>
+
+      function show(ID)
+      {
+          var elem = document.getElementById(ID);
+          elem.style.visibility = "visible" ;
+      }     
+      function hide(ID)
+      {
+          var elem = document.getElementById(ID);
+          elem.style.visibility = "hidden" ;
+      }      
+      
+      function validate(name)
+    {
+        check = name.actor.value;
+        if (check == '')
+        {
+            alert("No name inputed");
+            return False;
+        }
+        return True;
+    }
+
+      </script>
+    </head>
+    <body>
+      <nav>
+        <ul>
+            <li><a href="DatabaseWebsite.html">Home</a>
+                <ul>
+                    <li><a2 href="">to widen the gap</a2></li>
+                </ul>
+            <li onmouseover = "show('addList'),show('addList2')" onmouseleave = "hide('addList'),hide('addList2')"><a href="DatabaseWebsite.html">Add</a>
+                <ul>
+                    <li id ="addList"><a href="AddActor.html">Add Actor</a></li>
+                    <li id ="addList2"><a href="AddMovie.html">Add Movie</a></li>
+                </ul>
+            </li>
+            <li onmouseover = "show('searchList'),show('searchList2')" onmouseleave = "hide('searchList'),hide('searchList2')"><a href="">Search</a>
+                <ul>
+                    <li id ="searchList"><a href="ActorSearch.html">Search for Actor</a></li>
+                    <li id ="searchList2"><a href="SearchMovie.html">Search for Movie</a></li>
+                </ul>
+            </li>
+            <li onmouseover = "show('deleteList'),show('deleteList2')" onmouseleave = "hide('deleteList'),hide('deleteList2')"><a href="">Delete</a>
+                <ul>
+                    <li id ="deleteList"><a href="DeleteActor.html">Delete Actor</a></li>
+                    <li id ="deleteList2"><a href="DeleteMovie.html">Delete Movie</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+      <h1><u>Actor Search</u></h1>
+      <div>
+      <FORM  action = "actorsearch.php" method = "post" onSubmit="return validate(this)">                  <!--no need to use the post as no valuable information is being passed and can bookmark page if needed-->
+        <BR>
+        Name Of Actor: <input type="text" name="actor">
+        <BR>
+        <INPUT type="submit" >
+      </FORM>
+    </div>
+
+    
+    
+</body>
+</html>
+  

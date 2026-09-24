@@ -1,0 +1,106 @@
+<html>
+    <head>
+      <title>Add Movie</title>
+      <link rel="stylesheet" type="text/css" href="websiteStyle.css">
+    <script>
+      function show(ID)
+      {
+          var elem = document.getElementById(ID);
+          elem.style.visibility = "visible" ;
+      }     
+      function hide(ID)
+      {
+          var elem = document.getElementById(ID);
+          elem.style.visibility = "hidden" ;
+      }        
+
+      function validate(name)
+    {
+        check[0] = name.aMovieName.value;
+        if (check == '')
+        {
+            alert("No Movie inputed");            /*Checks to see if the value is empty before passing it inefficiently*/
+            return False;
+        }
+        check[1] = name.aActorName.value;
+        if (check == '')
+        {
+            alert("No Actor inputed");            
+            return False;
+        }
+        check[2] = name.aYear.value;
+        if (check == '')
+        {
+            alert("No Year inputed");           
+            return False;
+        }
+        check[3] = name.aPrice.value;
+        if (check == '')
+        {
+            alert("No Price inputed");           
+            return False;
+        }
+        check[4] = name.aGenre.value;
+        if (check == '')
+        {
+            alert("No Genre inputed");           
+            return False;
+        }
+        for (i=0;i!=4;i++)
+        {
+            for (j=0;j!=4;j++)
+            {
+                if(check[i] = check[j]);
+                {
+                    alert("Two are the same"); /*incase they have typed a value in twice*/
+                    return False;
+                }
+            }
+        }
+        
+        return True;
+    } 
+  </script>
+    </head>
+    <body>
+      <nav>
+        <ul>
+            <li><a href="DatabaseWebsite.html">Home</a>
+                <ul>
+                    <li><a2 href="">to widen the gap</a2></li>
+                </ul>
+            <li onmouseover = "show('addList'),show('addList2')" onmouseleave = "hide('addList'),hide('addList2')"><a href="DatabaseWebsite.html">Add</a>
+                <ul>
+                    <li id ="addList"><a href="AddActor.html">Add Actor</a></li>
+                    <li id ="addList2"><a href="AddMovie.html">Add Movie</a></li>
+                </ul>
+            </li>
+            <li onmouseover = "show('searchList'),show('searchList2')" onmouseleave = "hide('searchList'),hide('searchList2')"><a href="">Search</a>
+                <ul>
+                    <li id ="searchList"><a href="ActorSearch.html">Search for Actor</a></li>
+                    <li id ="searchList2"><a href="SearchMovie.html">Search for Movie</a></li>
+                </ul>
+            </li>
+            <li onmouseover = "show('deleteList'),show('deleteList2')" onmouseleave = "hide('deleteList'),hide('deleteList2')"><a href="">Delete</a>
+                <ul>
+                    <li id ="deleteList"><a href="DeleteActor.html">Delete Actor</a></li>
+                    <li id ="deleteList2"><a href="DeleteMovie.html">Delete Movie</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+      <h1><u>Movie add</u></h1>
+      <div>
+      <FORM action="AddMovie.php" method = "post" onsubmit="return validate(this)">
+        <BR>
+            Name Of Movie: <INPUT type="text" name="aMovieName"> <BR>
+            Name Of Actor: <INPUT type="text" name="aActorName"> <BR>
+            Name Of Year: <INPUT type="text" name="aYear"> <BR>
+            Price Of Movie: <INPUT type="text" name="aPrice"> <BR>
+            Name Of Genre: <INPUT type="text" name="aGenre"> <BR>
+        <INPUT type="submit" value="Submit this form">
+      </FORM>
+    </div>
+</body>
+</html>
+  
